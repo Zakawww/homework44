@@ -11,13 +11,13 @@
 </head>
 <body>
 <div class="container">
-<form method="post" action="/">
-    {% csrf_token %}
-    {% for i in a %}
-        <h2>Номер хода: {{ i.0 }} - Количество Быков: {{ i.1 }}, Количество Коров: {{ i.2 }}</h2>
-    {% endfor %}
-    <a class="btn btn-info mt-4" href="{% url 'index' %}">HOME PAGE</a>
-</form>
+    <form method="post" action="/">
+        {% csrf_token %}
+        {% for i in a %}
+            <h2>Номер хода: {{ i.0 }} - Количество Быков: {{ i.1 }}, Количество Коров: {{ i.2 }}</h2>
+        {% endfor %}
+        <a class="btn btn-info mt-4" href="{% url 'index' %}">HOME PAGE</a>
+    </form>
 </div>
 </body>
 </html>
