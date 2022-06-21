@@ -29,6 +29,8 @@ def index_view(request):
 
     except ValueError:
         error = 'Это не число. Введите числа!'
+    except IndexError:
+        error = 'Вы Ввели Пустую строку'
     amount = {"answer": error}
     context.update(dict(amount))
     return render(request, 'index.html', context)
